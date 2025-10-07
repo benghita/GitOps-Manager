@@ -287,6 +287,20 @@ wheels = [
 ]
 
 [[package]]
+name = "fastapi"
+version = "0.118.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "starlette" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/28/3c/2b9345a6504e4055eaa490e0b41c10e338ad61d9aeaae41d97807873cdf2/fastapi-0.118.0.tar.gz", hash = "sha256:5e81654d98c4d2f53790a7d32d25a7353b30c81441be7d0958a26b5d761fa1c8", size = 310536, upload-time = "2025-09-29T03:37:23.126Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/54/20/54e2bdaad22ca91a59455251998d43094d5c3d3567c52c7c04774b3f43f2/fastapi-0.118.0-py3-none-any.whl", hash = "sha256:705137a61e2ef71019d2445b123aa8845bd97273c395b744d5a7dfe559056855", size = 97694, upload-time = "2025-09-29T03:37:21.338Z" },
+]
+
+[[package]]
 name = "gitdb"
 version = "4.0.12"
 source = { registry = "https://pypi.org/simple" }
@@ -304,6 +318,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "agno" },
+    { name = "fastapi" },
     { name = "google-genai" },
     { name = "lancedb" },
     { name = "mcp" },
@@ -314,12 +329,16 @@ dependencies = [
     { name = "psycopg2" },
     { name = "pygithub" },
     { name = "pytest" },
+    { name = "python-multipart" },
     { name = "sqlalchemy" },
+    { name = "uvicorn" },
+    { name = "websockets" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "agno", specifier = ">=2.1.1" },
+    { name = "fastapi", specifier = ">=0.104.0" },
     { name = "google-genai", specifier = ">=1.41.0" },
     { name = "lancedb" },
     { name = "mcp", specifier = ">=1.16.0" },
@@ -330,7 +349,10 @@ requires-dist = [
     { name = "psycopg2", specifier = ">=2.9.10" },
     { name = "pygithub", specifier = ">=2.8.1" },
     { name = "pytest", specifier = ">=8.2.0" },
+    { name = "python-multipart", specifier = ">=0.0.6" },
     { name = "sqlalchemy", specifier = ">=2.0.43" },
+    { name = "uvicorn", specifier = ">=0.24.0" },
+    { name = "websockets", specifier = ">=12.0" },
 ]
 
 [[package]]
